@@ -12,11 +12,14 @@ npm install
 ```bash
 npm start
 ```
+### Gif
+
+![](./assets/images/demo.gif)
 
 
 ### Screenshot
 
-![](./images/screenshot.png)
+![](./assets/images/ScreenTesla.png)
 
 
 ## My process
@@ -31,61 +34,35 @@ npm start
 
 ### What I learned
 
-In this project I learned about properties that are not standardized in browsers by means of --webkit --moz --ms styles.
-And to customize an input of type range thanks to these.
-How to select DOM elements via [data-attributes].
-I was also able to practice my JS knowledge using Ecmascript 6+ functionalities.
+I learned about the use of relative and dimensional measurements of devices in RN.
+How absolute positions work in RN.
+Reuse of RN components thanks to their standardization.
+Tiktok-style viewport rendering
 
-```html
-<div class="slider-container">
-  <h4 class="theme-title">THEME</h4>
-  <input type="range" name="slider" min="1" max="3" value="1" id="slider" />
-</div>
+
+```jsx
+<View style={styles.container}>
+    <FlatList
+        data={cars}
+        renderItem={({ item }) => <CarItem car={item} />}
+        snapToAlignment={"start"}
+        snapToInterval={Dimensions.get("screen").height}
+        decelerationRate={"fast"}
+    />
+</View>
 ```
 ```css
-#slider::-webkit-slider-thumb {
-    width: 15px;
-    height: 15px;
-    background-color: var(--secondary-color);
-    border-radius: 50%;
-    cursor: pointer;
-}
+const styles = StyleSheet.create({
+	carContainer: {
+		width: "100%",
+		height: Dimensions.get('screen').height,
+	},
+})
 ```
-```js
-calculate(){
-    let [num1, operation, num2] = this.operand.split(" ");
-    num1 = parseFloat(num1);
-    num2 = parseFloat(num2);
-    const typeOperation = {
-        "+" :  num1 + num2, 
-        "-" :  num1 - num2, 
-        "/" :  num1 / num2, 
-        "x" :  num1 * num2, 
-    }
-    this.operand = `${typeOperation[operation]}`;
-}
-
-```
-
-### Continued development
-
-I did realize this project to practice my skills and use all what I am learning, actually.
-In my next projects I go to implement my knowledge in Node.js too, to make a site with persistence of information they.
-
-
-
-### Useful resources
-
-- [CSS-Tricks](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) - This article helped me to understand how to do for styling the input of the calculator.
-
 
 ## Author
 
 - Website : [Omar Dario Melendrez](https://omardario.online)
 
 
-
-## Acknowledgments
-
-Like ever I Acknowledgments to my family for support me in my long hours when I dont exist because I am learning or coding with so much will.
 
