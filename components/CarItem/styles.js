@@ -24,6 +24,14 @@ const styles = StyleSheet.create({
 		fontSize: 16,
 		color: "#5c5e62",
 	},
+	taglineCTA: {
+		textDecorationLine: "underline"
+	},
+	buttonsContainer: {
+		width: "100%",
+		position: "absolute",
+		bottom: 40
+	},
 });
 
 export default styles;

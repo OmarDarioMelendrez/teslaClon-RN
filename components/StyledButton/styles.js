@@ -19,7 +19,7 @@ const styles = StyleSheet.create({
 		backgroundColor: "#FFFFFFA6",
 	},
 	text: {
-        fontSize: 16,
+        fontSize: 13,
 		fontWeight: "500",
 		textTransform: "uppercase",
         justifyContent: "center",
